@@ -1,0 +1,14 @@
+C:/Users/Colten/Desktop/2024_IC_Contest/2005/testfixture.v {1 {vlog -work work -stats=none C:/Users/Colten/Desktop/2024_IC_Contest/2005/testfixture.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module test
+
+Top level modules:
+	test
+
+} {} {}} C:/Users/Colten/Desktop/2024_IC_Contest/2005/CS.v {0 {vlog -work work -stats=none C:/Users/Colten/Desktop/2024_IC_Contest/2005/CS.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module CS
+** Error: (vlog-13036) C:/Users/Colten/Desktop/2024_IC_Contest/2005/CS.v(47): near "++": Operator only allowed in SystemVerilog.
+** Error: (vlog-13036) C:/Users/Colten/Desktop/2024_IC_Contest/2005/CS.v(58): near "++": Operator only allowed in SystemVerilog.
+
+} {4.0 6.0} {}}
