@@ -78,7 +78,7 @@ initial begin
 `elsif MD3
 	mode = 2'b11;
 `else
-	mode = 2'bx;
+	mode = 2'b0;
 `endif
 end
 

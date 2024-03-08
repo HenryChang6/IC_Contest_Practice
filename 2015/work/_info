@@ -1,0 +1,53 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/18.1/modelsim_ase/win32aloem
+vSET
+!s110 1709865290
+!i10b 1
+!s100 3z30nL_TgQ90fQR8c9J0A1
+I?=dRBm^RFm?BXnh>dI>HP0
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dZ:/Users/henrychang/Desktop/2024_IC_Contest/IC_Contest_Practice/2015
+w1709809962
+8Z:/Users/henrychang/Desktop/2024_IC_Contest/IC_Contest_Practice/2015/SET.v
+FZ:/Users/henrychang/Desktop/2024_IC_Contest/IC_Contest_Practice/2015/SET.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1709865290.000000
+!s107 Z:/Users/henrychang/Desktop/2024_IC_Contest/IC_Contest_Practice/2015/SET.v|
+!s90 -reportprogress|300|-work|work|-stats=none|Z:/Users/henrychang/Desktop/2024_IC_Contest/IC_Contest_Practice/2015/SET.v|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+n@s@e@t
+vtestfixture1
+!s110 1709865291
+!i10b 1
+!s100 T^l6TZh^`z9K8;=Sz9:Li2
+I@cAh[FDg[C6Q5zWG]odjP2
+R0
+R1
+w1709865274
+8Z:/Users/henrychang/Desktop/2024_IC_Contest/IC_Contest_Practice/2015/testfixture.v
+FZ:/Users/henrychang/Desktop/2024_IC_Contest/IC_Contest_Practice/2015/testfixture.v
+L0 7
+R2
+r1
+!s85 0
+31
+!s108 1709865291.000000
+!s107 Z:/Users/henrychang/Desktop/2024_IC_Contest/IC_Contest_Practice/2015/testfixture.v|
+!s90 -reportprogress|300|-work|work|-stats=none|Z:/Users/henrychang/Desktop/2024_IC_Contest/IC_Contest_Practice/2015/testfixture.v|
+!i113 1
+R3
+R4

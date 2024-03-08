@@ -1,0 +1,8 @@
+Z:/Users/henrychang/Desktop/2024_IC_Contest/IC_Contest_Practice/2015/SET.v {1 {vlog -work work -stats=none Z:/Users/henrychang/Desktop/2024_IC_Contest/IC_Contest_Practice/2015/SET.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SET
+
+Top level modules:
+	SET
+
+} {} {}}

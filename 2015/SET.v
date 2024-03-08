@@ -11,7 +11,7 @@ output reg [7:0] candidate;
 
 wire [3:0] x1 ; wire [3:0] y1 ; wire [3:0] x2; wire [3:0] y2; wire [3:0] r1; wire [3:0] r2;
 wire [3:0] deltaX1; wire [3:0] deltaY1; wire [3:0] deltaX2; wire [3:0] deltaY2;
-reg  [3:0] current_x; reg [3:0] current_y ;
+reg  [3:0] current_x; reg [3:0]current_y ;
 
 assign x1 = central[23:20];
 assign y1 = central[19:16];
