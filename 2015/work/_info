@@ -1,0 +1,58 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/20.1
+vSET
+Z0 !s110 1711472942
+!i10b 1
+!s100 BzRe94lC6@MK0I73nMG<@1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I^2ZT8iX4L59X=`5SS@=9m2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/Colten/Desktop/Henry_IC_Contest/2015
+w1710000680
+8C:\Users\Colten\Desktop\2024_IC_Contest\2015\SET.v
+FC:\Users\Colten\Desktop\2024_IC_Contest\2015\SET.v
+!i122 62
+L0 1 108
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1711472942.000000
+!s107 C:\Users\Colten\Desktop\2024_IC_Contest\2015\SET.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\Colten\Desktop\2024_IC_Contest\2015\SET.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@s@e@t
+vtestfixture1
+R0
+!i10b 1
+!s100 0LSReXiSoX^?acSmdE=;F2
+R1
+IOQ_h26SOZ__^PI04iW?:^1
+R2
+R3
+w1710000901
+8C:\Users\Colten\Desktop\2024_IC_Contest\2015\testfixture.v
+FC:\Users\Colten\Desktop\2024_IC_Contest\2015\testfixture.v
+!i122 63
+L0 7 146
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:\Users\Colten\Desktop\2024_IC_Contest\2015\testfixture.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\Colten\Desktop\2024_IC_Contest\2015\testfixture.v|
+!i113 1
+R6
+R7

@@ -1,0 +1,109 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Colten/Desktop/Henry_IC_Contest/2008
+vIRAM
+Z0 !s110 1725636162
+!i10b 1
+!s100 SNA<>cN]z:f79LFkPi7Ja1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I1Y^`O72KZQA@^`BK2i<3U1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/Colten/Desktop/Henry_IC_Contest/2018
+Z4 w1724656761
+Z5 8testfixture.v
+Z6 Ftestfixture.v
+!i122 35
+L0 190 17
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1725636162.000000
+!s107 testfixture.v|
+Z9 !s90 testfixture.v|+define+tb3|+access+r|
+!i113 1
+Z10 o+access+r
+Z11 !s92 +define+tb3 +access+r
+Z12 tCvgOpt 0
+n@i@r@a@m
+vIROM
+R0
+!i10b 1
+!s100 YJ?FZ]23_i7Gb7Ad39B;;1
+R1
+I<l9eOB2XH>OeW`Z9mU0=`2
+R2
+R3
+R4
+R5
+R6
+!i122 35
+L0 165 19
+R7
+r1
+!s85 0
+31
+R8
+Z13 !s107 testfixture.v|
+R9
+!i113 1
+R10
+R11
+R12
+n@i@r@o@m
+vLCD_CTRL
+!s110 1725636013
+!i10b 1
+!s100 c`B:XAOSajb?G1[5m<h>=1
+R1
+Ic[E56SoFXR^MZP[hDobUD2
+R2
+R3
+w1725635992
+8C:/Users/Colten/Desktop/Henry_IC_Contest/2018/LCD_CTRL.v
+FC:/Users/Colten/Desktop/Henry_IC_Contest/2018/LCD_CTRL.v
+!i122 34
+L0 1 155
+R7
+r1
+!s85 0
+31
+!s108 1725636013.000000
+!s107 C:/Users/Colten/Desktop/Henry_IC_Contest/2018/LCD_CTRL.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Colten/Desktop/Henry_IC_Contest/2018/LCD_CTRL.v|
+!i113 1
+o-work work
+R12
+n@l@c@d_@c@t@r@l
+vtest
+R0
+!i10b 1
+!s100 0QAg@cX9F[V9L0F;Z=g2S0
+R1
+IO[<;HOQaYoYKL6T]RQE[]3
+R2
+R3
+R4
+R5
+R6
+!i122 35
+L0 26 135
+R7
+r1
+!s85 0
+31
+R8
+R13
+R9
+!i113 1
+R10
+R11
+R12

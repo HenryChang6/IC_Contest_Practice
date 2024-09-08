@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Colten/Desktop/Henry_IC_Contest
+vlcd_ctrl
+Z0 !s110 1708783116
+!i10b 1
+!s100 DK?G5OzVU@8c92MW0fAli2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IO4jj;3=gMm]W<FfBZYCl43
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/Colten/Desktop/Henry_IC_Contest/2007
+w1708783105
+8C:/Users/Colten/Desktop/2024_IC_Contest/2007/lcd_ctrl.v
+FC:/Users/Colten/Desktop/2024_IC_Contest/2007/lcd_ctrl.v
+!i122 42
+L0 1 117
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1708783116.000000
+!s107 C:/Users/Colten/Desktop/2024_IC_Contest/2007/lcd_ctrl.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Colten/Desktop/2024_IC_Contest/2007/lcd_ctrl.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vtest
+R0
+!i10b 1
+!s100 `XVf`chc=OeFLi<Gd>VnQ1
+R1
+I5a;kO97Kh>n@nJ_<ic?`L2
+R2
+R3
+w1708759371
+8C:/Users/Colten/Desktop/2024_IC_Contest/2007/testfixture.v
+FC:/Users/Colten/Desktop/2024_IC_Contest/2007/testfixture.v
+!i122 43
+L0 8 127
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Colten/Desktop/2024_IC_Contest/2007/testfixture.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Colten/Desktop/2024_IC_Contest/2007/testfixture.v|
+!i113 1
+R6
+R7

@@ -1,0 +1,50 @@
+`timescale 1ns/10ps
+module CS(Y, X, reset, clk);
+
+input  clk, reset; 
+input  [7:0] X;
+output reg [9:0] Y;
+
+reg [7:0] XS [0:8];
+reg [9:0] X_appr;
+reg [11:0] Sum;
+wire [9:0] X_avg;
+
+integer i, k, z, e;
+
+// Count Sum of 9 numbers from XS
+always @(posedge clk or posedge reset) begin
+    if(reset) begin
+        Sum <= 0;
+        for (z = 0; z < 9 ; z = z + 1 )  
+            XS[z] <= 0;
+    end
+    else begin
+        /* update XS and X_avg using the concept of "Sliding Window" */
+        // update Sum
+        Sum <= Sum + X - XS[0];
+        // Left Shifting each index creating space for new input
+        for(i = 1; i <= 8; i = i + 1) XS[i-1] <= XS[i]; 
+        // Add new input into XS
+        XS[8] <= X;
+    end
+end
+
+ // update X_avg
+assign  X_avg =  Sum / 9;
+
+// Count Appr
+always @(*) begin
+    X_appr = 0; 
+    // if X_avg equals to one of the XS, then X_appr <= X_avg
+    for(k = 0; k < 9; k = k + 1) begin 
+        if( (XS[k] <= X_avg) && (XS[k] > X_appr) ) 
+            X_appr = XS[k];
+    end
+end
+
+// Determine Output Y
+assign Y = ( Sum + ( (X_appr << 3) + X_appr ) ) >> 3;
+
+endmodule
+
