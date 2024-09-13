@@ -64,7 +64,7 @@ always @(*) begin
         IDLE: nxt_state <= READ;
         READ: if (IROM_A == 6'd63) nxt_state <= OPERATE;
         OPERATE: if (cmd_valid && cmd == WRITE_CMD) nxt_state <= WRITE;
-        // When WRITE complete, the program will end 
+        // When WRITE complete, the program will end
     endcase
 end 
 
