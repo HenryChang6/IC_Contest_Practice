@@ -13,7 +13,7 @@
 	`define BCEXP        "./dat/ICC17_bcexp.dat"
 `endif
 
-module testfixture;
+module testfixture;	
 
 parameter N_PAT = 16383;
 
