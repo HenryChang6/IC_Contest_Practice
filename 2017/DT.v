@@ -22,14 +22,15 @@ localparam B = 4'd6;
 localparam B_SE = 4'd7;
 localparam B_S = 4'd8;
 localparam B_SW = 4'd9;
-localparam B_WRITE = 4'd10;
-localparam FINISH = 4'd11;
+localparam B_READ_CUR = 4'd10;
+localparam B_WRITE = 4'd11;
+localparam FINISH = 4'd12;
 
 // reg
+reg pixel;
 reg pre_is_obj;
 reg [3:0] state, nxt_state;
-reg [7:0] data [0:3];
-reg [7:0] pixel;
+reg [7:0] data [0:4];
 reg [13:0] pos;
 
 // wire 
@@ -43,34 +44,34 @@ wire [13:0] pos_w = pos - {7'd0,7'd1};
 wire [13:0] pos_ne = pos - {7'd0, 7'd127};
 wire [13:0] pos_n = pos - {7'd1,7'd0};
 wire [13:0] pos_nw = pos - {7'd1,7'd1};
-wire [7:0] min1 = ((data[0]>data[1]) ? data[1] : data[0]);
-wire [7:0] min2 = ((data[2]>data[3]) ? data[3] : data[2]);
-wire [7:0] min = (min1 > min2 ? min2 : min1);
-wire [7:0] f_res = min + 1;
-// During B_WRITE state, res_addr == pos
-wire [7:0] b_res = ((f_res > res_di) ? res_di : f_res);
+wire [7:0] min1 = ((data[0]<data[1]) ? data[0] : data[1]);
+wire [7:0] min2 = ((data[2]<data[3]) ? data[2] : data[3]);
+wire [7:0] f_res =  (min1 < min2 ? min1 : min2) + 1;
+wire [7:0] b_res = ((f_res < data[4]) ? f_res : data[4]);
 
 // FSM
-always @(posedge clk or posedge reset) begin
-	if (reset) state <= IDLE;
+always @(posedge clk /*or negedge reset*/) begin
+	if (!reset) state <= IDLE;
 	else state <= nxt_state; 
 end
 
-// Assign value for some reg
+// Combination
 always @(*) begin
 	sti_rd <= 1;
 	sti_addr <= pos[13:4]; 
-	pixel <= sti_di[pos[3:0]]; // pixel <= sti_di[~pos[3:0]];
+	pixel <= sti_di[~pos_col[3:0]]; 
 	res_rd <= ~res_wr;
 end
 
 // Next State Logic
+// Comb要寫滿!!! 不然就要在一開始寫個 nxt_state <= state
 always @(*) begin
 	case(state) 
 		IDLE: nxt_state <= F;
 		F: begin 
 			if (pos_row == 7'd127) nxt_state <= B; // front pass complete
 			else if (pixel) nxt_state <= (pre_is_obj ? F_NE : F_NW);
+			else nxt_state <= F;
 		end
 		F_NW: nxt_state <= F_N;
 		F_N: nxt_state <= F_NE;
@@ -79,16 +80,18 @@ always @(*) begin
 		B: begin
 			if (pos_row == 0) nxt_state <= FINISH;
 			else if (pixel) nxt_state <= (pre_is_obj ? B_SW : B_SE);
+			else nxt_state <= B;
 		end
 		B_SE: nxt_state <= B_S;
 		B_S: nxt_state <= B_SW;
-		B_SW: nxt_state <= B_WRITE;
+		B_SW: nxt_state <= B_READ_CUR;
+		B_READ_CUR: nxt_state <= B_WRITE;
 		B_WRITE: nxt_state <= B;
 	endcase
 end
 
 // state behavior
-always @(*) begin
+always @(posedge clk) begin
 	res_wr <= 0; 
 	case(state) 
 		IDLE: begin
@@ -100,7 +103,6 @@ always @(*) begin
 		F: begin
 			if (pixel) begin
 				res_addr <= (pre_is_obj ? pos_ne : pos_nw);
-				pre_is_obj <= 1;
 			end
 			else begin
 				pre_is_obj <= 0;
@@ -133,12 +135,12 @@ always @(*) begin
 			data[3] <= f_res;
 			// update pos
 			pos <= pos_e;
+			pre_is_obj <= 1;
 		end
 
 		B: begin
 			if (pixel) begin
 				res_addr <= (pre_is_obj ? pos_sw : pos_se);
-				pre_is_obj <= 1;
 			end
 			else begin
 				pos <= pos_w;
@@ -162,6 +164,10 @@ always @(*) begin
 			res_addr <= pos; // we want to know current value to calculate b_res;
 		end
 
+		B_READ_CUR: begin
+			data[4] <= res_di;
+		end
+
 		B_WRITE: begin
 			res_wr <= 1;
 			res_addr <= pos;
@@ -172,6 +178,7 @@ always @(*) begin
 			data[3] <= b_res;
 			// updata pos
 			pos <= pos_w;
+			pre_is_obj <= 1;
 		end
 
 		FINISH: begin 
